@@ -14,13 +14,14 @@ public class Field {
                 System.out.print(symbol + "  ");
             }
         }
+        System.out.println();
     }
 
     public char checkField(){
         char statement = '.';
 
         for (int i = 0; i < field.length; i++) {
-            for (int j = 0; j < field[j].length; j++) {
+            for (int j = 0; j < field[j].length-1; j++) {
                 if ((field[i][0] == 'x' && field[i][1] == 'x' && field[i][2] == 'x') || (field[0][j] == 'x' && field[1][j] == 'x' && field[2][j] == 'x') ||
                         (field[0][0] == 'x' && field[1][1] == 'x' && field[2][2] == 'x') || (field[2][0] == 'x' && field[1][1] == 'x' && field[0][2] == 'x')){
                     statement = 'x';
